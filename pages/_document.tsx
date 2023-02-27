@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 const Document = () => {
   return (
-    <Html lang="en">
+    <Html>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -11,16 +11,15 @@ const Document = () => {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body className="overflow-hidden dark:bg-black bg-slate-50 p-10">
+      <body className="overflow-hidden dark:bg-black bg-slate-50 p-10 ">
         <Main />
         <NextScript />
       </body>
     </Html>
   )
 }
-
 export default Document

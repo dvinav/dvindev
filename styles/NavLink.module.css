@@ -1,0 +1,58 @@
+.NavLinkBorder, .NavLinkBorderActive {
+	display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+	.NavLinkBorder:after {
+		background: #475569;
+	}
+
+	.NavLinkBorderActive:after {
+		background: #e2e8f0;;
+	}
+
+	.NavLinkBorder:hover:after {
+		background: #e2e8f0;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.NavLinkBorder:after {
+		background: #94a3b8;
+	}
+
+	.NavLinkBorderActive:after {
+		background: #334155;
+		;
+	}
+
+	.NavLinkBorder:hover:after {
+		background: #334155;
+	}
+}
+
+.NavLinkBorder:after {
+	content: '';
+	display: block;
+	width: 0;
+	margin: auto;
+	margin-top: 10px;
+	height: 2px;
+	border-radius: 1px;
+	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.NavLinkBorderActive:after {
+	content: '';
+	display: block;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+	height: 2px;
+	border-radius: 1px;
+	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.NavLinkBorder:hover:after {
+	width: 50%;
+}
