@@ -3,7 +3,7 @@ import Title from './Title'
 
 const Header = () => {
   return (
-    <header className="h-14 flex font-medium ltr:tracking-wider">
+    <header className="h-14 lg:flex text-base rtl:text-lg ltr:tracking-wider hidden">
       <div className="flex-1">
         <Title />
       </div>

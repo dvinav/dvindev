@@ -15,7 +15,7 @@ const Document = () => {
           rel="stylesheet"
         />
       </Head>
-      <body className="overflow-hidden dark:bg-black bg-slate-50 p-10 ">
+      <body className="overflow-hidden dark:bg-black bg-slate-50 lg:p-10">
         <Main />
         <NextScript />
       </body>

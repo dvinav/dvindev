@@ -1,0 +1,37 @@
+@media (prefers-color-scheme: dark) {
+	.ActiveLink:after {
+		background: #e2e8f0;
+	}
+
+}
+
+@media (prefers-color-scheme: light) {
+	.ActiveLink:after {
+		background: #334155;
+		
+	}
+}
+
+.NavLink:after {
+	content: '';
+	display: block;
+	width: 0%;
+	margin: auto;
+	margin-top: 10px;
+	height: 2px;
+	border-radius: 1px;
+	transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.NavLink {
+	margin-top: 12px;
+	transition: font-weight .3s;
+}
+
+.ActiveLink:after {
+	width: 70%;
+}
+
+.NavLink:active:after {
+	width: 50%;
+}
