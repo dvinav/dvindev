@@ -3,9 +3,8 @@ import { useRouter } from 'next/router'
 import { FormattedMessage } from 'react-intl'
 import styles from 'styles/NavLink.module.css'
 
-const NavLink = (props: { children: React.ReactNode }) => {
-  const { locale, asPath } = useRouter()
-
+const NavLink = (props: { children?: React.ReactNode }) => {
+  const { asPath } = useRouter()
   let isActive = asPath.substring(1) == props.children
 
   let activeLinkClasses = isActive

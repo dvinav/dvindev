@@ -9,9 +9,9 @@ const NavLink = (props: { children: React.ReactNode }) => {
   let isActive = asPath.substring(1) == props.children
 
   let activeLinkClasses = isActive
-    ? 'dark:text-slate-200 pointer-events-none text-slate-700 font-bold ltr:tracking-widest	' +
+    ? 'dark:text-slate-200 pointer-events-none text-slate-800	' +
       styles.ActiveLink
-    : 'dark:text-slate-500 text-slate-500 '
+    : 'dark:text-slate-500 text-slate-400 '
 
   return (
     <li className={styles.NavLink + ' float-left ' + activeLinkClasses}>

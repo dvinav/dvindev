@@ -1,4 +1,5 @@
 import NavLink from './NavLink'
+import LocaleMenu from 'components/LocaleMenu'
 
 const Nav = () => {
   return (
@@ -9,6 +10,7 @@ const Nav = () => {
         <NavLink>skills</NavLink>
         <NavLink>contact</NavLink>
         <NavLink>about</NavLink>
+        <LocaleMenu />
       </ul>
     </div>
   )

@@ -1,5 +1,7 @@
-const PageContainer = () => {
-  return <div className="flex-1"></div>
+import styles from 'styles/PageContainer.module.css'
+
+const PageContainer = (props: { children: React.ReactNode }) => {
+  return <div className={styles.PageContainer}></div>
 }
 
 export default PageContainer

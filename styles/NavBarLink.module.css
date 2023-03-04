@@ -20,16 +20,17 @@
 	margin-top: 10px;
 	height: 2px;
 	border-radius: 1px;
-	transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: .3s;
 }
 
 .NavLink {
 	margin-top: 12px;
-	transition: font-weight .3s;
+	transition: color .3s;
+	-webkit-touch-callout: none;
 }
 
 .ActiveLink:after {
-	width: 70%;
+	width: 50%;
 }
 
 .NavLink:active:after {
