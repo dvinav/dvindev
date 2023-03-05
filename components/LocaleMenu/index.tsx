@@ -36,6 +36,7 @@ const LocaleMenu = () => {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
   return (
     <>
       <Icon
@@ -51,12 +52,12 @@ const LocaleMenu = () => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
-          <Link href={useRouter().asPath} locale="en">
+          <Link href={useRouter().route} locale="en">
             <FormattedMessage id="lang.EN" />
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href={useRouter().asPath} locale="fa">
+          <Link href={useRouter().route} locale="fa">
             <FormattedMessage id="lang.FA" />
           </Link>
         </MenuItem>

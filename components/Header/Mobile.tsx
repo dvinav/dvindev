@@ -2,14 +2,14 @@ import Title from './Title'
 import LocaleMenu from 'components/LocaleMenu'
 
 const Mobile = () => (
-  <header className="h-14 flex text-base rtl:text-lg ltr:tracking-wider px-10 mt-4 lg:hidden content-center">
-    <div className="basis-full">
+  <>
+    <div className="basis-full lg:hidden">
       <Title />
     </div>
-    <div className="flex-1 flex items-center justify-items-end ">
+    <div className="flex-1 flex items-center justify-items-end lg:hidden">
       <LocaleMenu />
     </div>
-  </header>
+  </>
 )
 
 export default Mobile

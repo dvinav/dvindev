@@ -1,8 +1,6 @@
 import 'styles/globals.css'
-import styles from 'styles/App.module.css'
 
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
 import { IntlProvider } from 'react-intl'
 
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -12,7 +10,9 @@ import NavBar from 'components/NavBar'
 
 import fa from 'locales/fa.json'
 import en from 'locales/en.json'
-import PageContainer from 'components/PageContainer'
+
+import TabContainer from 'layout/TabContainer'
+import AppContainer from 'layout/AppContainer'
 
 const messages = {
   fa,
@@ -25,27 +25,20 @@ const darkTheme = createTheme({
   }
 })
 
-const App = ({ Component, pageProps }: AppProps) => {
-  const { locale } = useRouter()
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <IntlProvider
-      locale={locale as string}
-      messages={messages[locale as keyof typeof messages]}
+      locale={router.locale as string}
+      messages={messages[router.locale as keyof typeof messages]}
     >
       <ThemeProvider theme={darkTheme}>
-        <main
-          className={
-            'w-full lg:border lg:border-slate-400 lg:py-10 lg:px-24 select-none lg:block ' +
-            styles.Main
-          }
-          dir={locale == 'fa' ? 'rtl' : 'ltr'}
-        >
+        <AppContainer>
           <Header />
-          <PageContainer>
-            <Component {...pageProps} />
-          </PageContainer>
+          <TabContainer>
+            <Component {...pageProps} key={router.asPath} />
+          </TabContainer>
           <NavBar />
-        </main>
+        </AppContainer>
       </ThemeProvider>
     </IntlProvider>
   )
