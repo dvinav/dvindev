@@ -1,13 +1,11 @@
 import Head from 'next/head'
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <Head>
-        <title>Dvin: Home</title>
+        <title>Dvin | Home</title>
       </Head>
     </>
   )
 }
-
-export default Home

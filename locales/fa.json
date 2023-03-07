@@ -5,6 +5,8 @@
   "skills": "مهارت‌ها",
   "contact": "تماس",
   "about": "درباره",
-  "lang.FA": "فارسی",
-  "lang.EN": "English"
+  "lang.fa": "فارسی",
+  "lang.en": "English",
+  "home.hello": "درود، دوین هستم!",
+  "home.intro": "طراح و برنامه‌نویس وب"
 }

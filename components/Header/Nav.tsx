@@ -1,7 +1,7 @@
-import NavLink from './NavLink'
+import NavLink from 'components/NavLink'
 import LocaleMenu from 'components/LocaleMenu'
 
-const Nav = () => {
+export default function Nav() {
   return (
     <div className="h-full flex-1 uppercase flex items-center">
       <div className="basis-full"></div>
@@ -9,11 +9,8 @@ const Nav = () => {
         <NavLink>home</NavLink>
         <NavLink>skills</NavLink>
         <NavLink>contact</NavLink>
-        <NavLink>about</NavLink>
         <LocaleMenu />
       </ul>
     </div>
   )
 }
-
-export default Nav

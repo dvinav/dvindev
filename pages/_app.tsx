@@ -1,47 +1,31 @@
-import 'styles/globals.css'
+import 'styles/globals.sass'
+import styles from 'styles/modules/App.module.sass'
 
 import type { AppProps } from 'next/app'
 import { IntlProvider } from 'react-intl'
 
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { ThemeProvider } from '@mui/material/styles'
 
 import Header from 'components/Header'
 import NavBar from 'components/NavBar'
 
-import fa from 'locales/fa.json'
-import en from 'locales/en.json'
+import GetMessages from 'config/messages'
+import Theme from 'config/theme'
 
-import TabContainer from 'layout/TabContainer'
-import AppContainer from 'layout/AppContainer'
+export default function App({ Component, pageProps, router }: AppProps) {
+  let locale: string = String(router.locale)
 
-const messages = {
-  fa,
-  en
-}
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark'
-  }
-})
-
-const App = ({ Component, pageProps, router }: AppProps) => {
   return (
-    <IntlProvider
-      locale={router.locale as string}
-      messages={messages[router.locale as keyof typeof messages]}
-    >
-      <ThemeProvider theme={darkTheme}>
-        <AppContainer>
+    <IntlProvider locale={locale} messages={GetMessages(locale)}>
+      <ThemeProvider theme={Theme}>
+        <main className="w-full lg:border lg:border-slate-400 lg:py-10 lg:px-24 select-none lg:block" dir={locale == 'fa' ? 'rtl' : 'ltr'}>
           <Header />
-          <TabContainer>
+          <div className={'border border-red-400 ' + styles.TabContainer}>
             <Component {...pageProps} key={router.asPath} />
-          </TabContainer>
+          </div>
           <NavBar />
-        </AppContainer>
+        </main>
       </ThemeProvider>
     </IntlProvider>
   )
 }
-
-export default App

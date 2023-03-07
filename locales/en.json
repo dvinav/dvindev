@@ -5,6 +5,8 @@
   "skills": "Skills",
   "contact": "Contact",
   "about": "About",
-  "lang.FA": "فارسی",
-  "lang.EN": "English"
+  "lang.fa": "فارسی",
+  "lang.en": "English",
+  "home.hello": "Hello, I'm Dvin!",
+  "home.intro": "Website designer and developer."
 }

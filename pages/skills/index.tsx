@@ -1,11 +1,11 @@
 import Head from 'next/head'
 
-const Skills = () => (
-  <>
-    <Head>
-      <title>Dvin: Skills</title>
-    </Head>
-  </>
-)
-
-export default Skills
+export default function Skills() {
+  return (
+    <>
+      <Head>
+        <title>Dvin: Skills</title>
+      </Head>
+    </>
+  )
+}

@@ -1,0 +1,47 @@
+.NavLink, .NavLinkActive
+	display: inline-block
+	-webkit-touch-callout: none
+	touch-action: none
+
+@media (prefers-color-scheme: dark)
+	.NavLink:after
+		background: #475569
+
+	.NavLinkActive:after
+		background: #e2e8f0
+
+	.NavLink:hover:after
+		background: #e2e8f0
+
+@media (prefers-color-scheme: light)
+	.NavLink:after
+		background: #94a3b8
+
+	.NavLinkActive:after
+		background: #334155
+
+	.NavLink:hover:after
+		background: #334155
+
+.NavLink:after
+	content: ''
+	display: block
+	width: 0
+	margin: auto
+	margin-top: 10px
+	height: 2px
+	border-radius: 1px
+	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1)
+
+.NavLinkActive:after
+	content: ''
+	display: block
+	width: 50%
+	margin: auto
+	margin-top: 10px
+	height: 2px
+	border-radius: 1px
+	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1)
+
+.NavLink:hover:after
+	width: 50%
