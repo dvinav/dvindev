@@ -7,7 +7,7 @@ export default function Nav() {
       <div className="basis-full"></div>
       <ul className="basis-auto w-full flex gap-x-20">
         <NavLink>home</NavLink>
-        <NavLink>skills</NavLink>
+        <NavLink>about</NavLink>
         <NavLink>contact</NavLink>
         <LocaleMenu />
       </ul>
