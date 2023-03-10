@@ -1,0 +1,28 @@
+// Main Container
+
+.Main
+	user-select: none
+	max-width: none
+	-webkit-tap-highlight-color: transparent
+
+@media (min-width: 1024px)
+	.Main
+		border: 1px solid #94a3b8
+		padding: 2.5rem 6rem 2.5rem
+
+// Page Container
+
+.Page
+	display: flex
+	align-items: center
+	max-width: none
+	justify-content: center
+
+@media (max-width: 1024px)
+	.Page
+		height: calc(100vh - 18.5rem)
+		padding: 0 2rem 0
+
+@media (min-width: 1024px)
+	.Page
+		height: calc(100vh - 15rem)

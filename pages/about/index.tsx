@@ -1,30 +1,48 @@
-import SkillCard from 'components/SkillCard'
-import Head from 'next/head'
+import { Container, Grid } from '@mui/material'
 import { FormattedMessage } from 'react-intl'
+import { GridProps } from '@mui/material'
 
-export default function Skills() {
+import Text from 'components/Text'
+import SkillCard from 'components/SkillCard'
+import Layout from 'components/Layout'
+import Head from 'next/head'
+
+const IProps: GridProps = {
+  item: true,
+  xs: 1
+}
+
+export default function About() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Dvin | About</title>
       </Head>
-      <div className="h-full w-auto flex items-center lg:gap-16 ">
-        <div className="flex flex-col lg:flex-row items-center lg:gap-16 ">
-          <div className="basis-2/5 ">
-            <p className="rtl:lg:text-2xl traffic rtl:font-thin text-sm lg:text-lg text-justify dark:text-slate-200 text-slate-700">
-              <FormattedMessage id="about.main" />
-            </p>
-          </div>
-          <div className="basis-3/5 grid grid-cols-3 gap-y-2 gap-x-2 lg:gap-4 notyekan mt-10">
+      <Container disableGutters className="w-auto flex flex-col lg:flex-row items-center lg:gap-16">
+        <Text type="p" className="basis-2/5 mb-10 lg:mb-0">
+          <FormattedMessage id="about.main" />
+        </Text>
+        <Grid container spacing={2} columns={3} className="noyekan basis-3/5">
+          <Grid {...IProps}>
             <SkillCard file="/svg/javascript.svg" name="JavaScript" />
+          </Grid>
+          <Grid {...IProps}>
             <SkillCard file="/svg/typescript.svg" name="TypeScript" />
+          </Grid>
+          <Grid {...IProps}>
             <SkillCard file="/svg/node.svg" name="Node.JS" />
+          </Grid>
+          <Grid {...IProps}>
             <SkillCard file="/svg/react.svg" name="React" />
+          </Grid>
+          <Grid {...IProps}>
             <SkillCard file="/svg/mongo.svg" name="MongoDB" />
-            <SkillCard file="/svg/nextjs.svg" name="Next.JS" />
-          </div>
-        </div>
-      </div>
-    </>
+          </Grid>
+          <Grid item xs={1}>
+            <SkillCard file="/svg/nextjs.svg" name="Next.JS" invert />
+          </Grid>
+        </Grid>
+      </Container>
+    </Layout>
   )
 }

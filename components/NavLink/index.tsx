@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FormattedMessage } from 'react-intl'
-import styles from 'styles/modules/NavLink.module.sass'
+import styles from 'styles/navLink.module.sass'
 
 type Props = {
   children: React.ReactNode

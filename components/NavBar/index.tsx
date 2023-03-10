@@ -1,13 +1,22 @@
+import styles from 'styles/navbar.module.sass'
+
+import { useRouter } from 'next/router'
+
+import { Montserrat, Yekan } from 'util/fonts'
+
 import NavLink from 'components/NavLink'
+import SocialIcons from 'components/SocialIcons'
 
 const NavBar = () => {
+  const { locale } = useRouter()
   return (
-    <div className="text-sm h-28 rtl:text-lg ltr:tracking-wider w-full flex items-center lg:hidden fixed bottom-0">
-      <ul className="h-full flex uppercase items-center w-full flex flex-1 basis-full gap-x-6 rtl:gap-x-8 justify-center">
+    <div className={`${styles.NavBar} rtl:text-lg ltr:tracking-wider ${locale == 'fa' ? Yekan.className : Montserrat.className}`}>
+      <ul className={`${styles.Nav} rtl:gap-x-8`}>
         <NavLink>home</NavLink>
         <NavLink>about</NavLink>
         <NavLink>contact</NavLink>
       </ul>
+      <SocialIcons />
     </div>
   )
 }

@@ -1,0 +1,37 @@
+// Main Header
+
+.Header
+	height: 3.5rem
+	display: flex
+	margin: 1rem 0 1rem
+
+@media (max-width: 1024px)
+	.Header
+		padding: 0 2rem 0
+
+// Title Section
+
+.Title
+	flex-basis: full
+	display: flex
+	align-items: center
+	gap: 2rem
+// Nav & Locale Selector
+
+.Nav, .LocaleMenu
+	flex: 1 1 0%
+	display: flex
+	align-items: center
+	justify-items: end
+
+@media (max-width: 1024px)
+	.Nav
+		display: none
+
+@media (min-width: 1024px)
+	.LocaleMenu
+		display: none
+
+.LocaleMenu
+	flex-basis: 10%
+	justify-content: end
