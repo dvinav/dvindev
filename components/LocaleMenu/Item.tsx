@@ -1,18 +1,24 @@
 import { MenuItem } from '@mui/material'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { FormattedMessage } from 'react-intl'
 
 type Props = {
-  url: string
   locale: string
+  asPath: string
+  hide: () => void
 }
 
-export default function Item({ url, locale }: Props) {
+export default function Item({ locale, asPath, hide }: Props) {
+  const router = useRouter()
+  console.log(typeof hide, hide) // outputs undefined
+
   return (
-    <MenuItem onClick={close}>
-      <Link href={url} locale={locale}>
-        <FormattedMessage id={`lang.${locale}`} />
-      </Link>
+    <MenuItem
+      onClick={() => {
+        setTimeout(() => router.push(asPath, asPath, { locale }), 300)
+      }}
+    >
+      <FormattedMessage id={`lang.${locale}`} />
     </MenuItem>
   )
 }

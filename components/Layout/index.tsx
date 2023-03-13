@@ -6,8 +6,13 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <MotionConfig transition={{ duration: 0.1, ease: 'easeOut', delay: 0 }}>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <MotionConfig>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2, delay: 0, ease: [0.16, 0.43, 0.02, 0.99] }}
+      >
         {children}
       </motion.div>
     </MotionConfig>

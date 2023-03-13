@@ -10,7 +10,11 @@ import SocialIcons from 'components/SocialIcons'
 import Title from './Title'
 import Nav from './Nav'
 
-export default function Header() {
+type Props = {
+  hide: () => void
+}
+
+export default function Header({ hide }: Props) {
   const { locale } = useRouter()
 
   return (
@@ -25,7 +29,7 @@ export default function Header() {
         <Nav />
       </div>
       <div className={styles.LocaleMenu}>
-        <LocaleMenu />
+        <LocaleMenu hide={hide} />
       </div>
     </header>
   )
