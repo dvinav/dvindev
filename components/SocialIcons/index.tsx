@@ -8,9 +8,9 @@ const IconProps = {
 export default function SocialIcons() {
   return (
     <div className="flex gap-4">
-      <WhatsApp {...IconProps} onClick={() => window.open('https://api.whatsapp.com/send?phone=989022005980')} />
-      <Telegram {...IconProps} onClick={() => window.open('https://t.me/dvinavanesian')} />
-      <PhoneOutlined {...IconProps} onClick={() => window.open('tel:+989022005980')} />
+      <WhatsApp {...IconProps} onClick={() => window.open('https://api.whatsapp.com/send?phone=989020092004')} />
+      <Telegram {...IconProps} onClick={() => window.open('https://t.me/dvinav')} />
+      <PhoneOutlined {...IconProps} onClick={() => window.open('tel:+989020092004')} />
       <EmailOutlined {...IconProps} onClick={() => window.open('mailto:dvin.avanesian@outlook.com')} />
     </div>
   )
